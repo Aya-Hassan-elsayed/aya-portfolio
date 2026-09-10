@@ -1,0 +1,1108 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HOME
+========================================= */
+
+.home {
+  min-height: 100vh;
+
+  background: #0f0d22;
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 100px 0 70px;
+
+  /* مساحة الـ Side Navbar */
+}
+
+
+/* =========================================
+   BACKGROUND DECORATION
+========================================= */
+
+.home::before {
+  content: "";
+
+  position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(173, 37, 117, 0.16) 0%,
+      rgba(173, 37, 117, 0.06) 38%,
+      transparent 72%
+    );
+
+  top: -300px;
+  right: -180px;
+
+  pointer-events: none;
+}
+
+
+.home::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(173, 37, 117, 0.08),
+      transparent 70%
+    );
+
+  bottom: -300px;
+  left: -220px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.home-container {
+  width: 90%;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 60px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.home-content {
+  width: 52%;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.home-content h1 {
+  font-size: 72px;
+
+  font-weight: 800;
+
+  line-height: 0.98;
+
+  letter-spacing: -3px;
+
+  margin: 0 0 22px;
+
+  color: #ffffff;
+
+  opacity: 0;
+
+  animation:
+    textReveal 0.8s ease forwards;
+
+  animation-delay: 0.8s;
+}
+
+
+.home-content h1 span {
+  display: block;
+
+  color: #ffff;
+
+  font-weight: 800;
+
+  margin-top: 8px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   DEVELOPER TITLE
+========================================= */
+
+.developer-title {
+  font-size: 28px;
+
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  color: #ffffff;
+
+  margin: 0 0 20px;
+
+  min-height: 40px;
+
+  opacity: 0;
+
+  animation:
+    textReveal 0.8s ease forwards;
+
+  animation-delay: 1.4s;
+}
+
+
+.typing-text {
+  display: inline-block;
+
+  color: #ad2575;
+
+  font-weight: 700;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  vertical-align: bottom;
+
+  width: 0;
+
+  border-right: 2px solid #ad2575;
+
+  animation:
+    typing 4.5s steps(18, end) infinite,
+    cursorBlink 0.7s step-end infinite;
+}
+
+
+/* =========================================
+   TYPING ANIMATION
+========================================= */
+
+@keyframes typing {
+
+  0% {
+    width: 0;
+  }
+
+  10% {
+    width: 0;
+  }
+
+  45% {
+    width: 18ch;
+  }
+
+  65% {
+    width: 18ch;
+  }
+
+  90% {
+    width: 0;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+
+@keyframes cursorBlink {
+
+  0%,
+  50% {
+    border-color: #ad2575;
+  }
+
+  51%,
+  100% {
+    border-color: transparent;
+  }
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.description {
+  max-width: 520px;
+
+  color: #aaa7b7;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1.8;
+
+  margin: 0 0 30px;
+
+  opacity: 0;
+
+  animation:
+    textReveal 0.8s ease forwards;
+
+  animation-delay: 2s;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.home-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 30px;
+
+  opacity: 0;
+
+  animation:
+    textReveal 0.8s ease forwards;
+
+  animation-delay: 2.6s;
+}
+
+
+.home-buttons a,
+.home-buttons button {
+  min-height: 54px;
+
+  padding: 14px 32px;
+
+  border-radius: 0;
+
+  text-decoration: none;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.btn-primary {
+  min-height: 54px;
+
+  padding: 6px 8px 6px 28px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 22px;
+
+  background: linear-gradient(90deg,#af2676 0% ,#441b45 100% ,#fff);
+
+background-size: 100% 100%;
+
+color: #ffffff;
+border-radius: 0;
+border: none;
+box-shadow: none;
+  text-decoration: none;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.btn-primary i {
+
+  width: 40px;
+
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+
+  color: #ad2575;
+
+  font-size: 17px;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.btn-primary:hover {
+
+  background: linear-gradient(90deg,#af2676 0% ,#441b45 100% ,#fff);
+
+
+  color: #ffffff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(173, 37, 117, 0.35);
+}
+
+
+.btn-primary:hover i {
+
+  transform: translate(3px, -3px);
+
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.btn-secondary {
+  background: transparent;
+
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+.btn-secondary:hover {
+  background: #ffffff;
+
+  color: #0f0d22;
+
+  transform: translateY(-3px);
+
+  border-color: #ffffff;
+}
+
+
+/* =========================================
+   SOCIAL LINKS
+========================================= */
+
+/* =========================================
+   SOCIAL LINKS
+========================================= */
+
+.social-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 34px;
+
+  opacity: 0;
+
+  animation:
+    textReveal 0.8s ease forwards;
+
+  animation-delay: 3.2s;
+}
+
+
+/* =========================================
+   SOCIAL ICON
+========================================= */
+
+.social-links a {
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  text-decoration: none;
+
+  font-size: 19px;
+
+  color: #0f0d22;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   GITHUB
+========================================= */
+
+.social-links .github {
+  color: #0f0d22;
+}
+
+
+/* =========================================
+   LINKEDIN
+========================================= */
+
+.social-links .linkedin {
+  color: #0f0d22;
+}
+
+
+/* =========================================
+   WHATSAPP
+========================================= */
+
+.social-links .whatsapp {
+  color: #0f0d22;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.social-links a:hover {
+
+  transform: translateY(-5px);
+
+  background: #ad2575;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 25px rgba(173, 37, 117, 0.35);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.social-links a i {
+
+  font-size: 19px;
+
+  transition: transform 0.3s ease;
+}
+
+
+.social-links a:hover i {
+
+  transform: scale(1.1);
+}
+
+
+/* =========================================
+   IMAGE AREA
+========================================= */
+
+.home-image {
+  width: 48%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  position: relative;
+
+  opacity: 0;
+
+  animation:
+    imageAnimation 1.2s ease forwards;
+
+  animation-delay: 0.5s;
+}
+
+
+/* =========================================
+   CIRCULAR IMAGE CONTAINER
+========================================= */
+
+.image-circle {
+  width: 430px;
+
+  height: 430px;
+
+  position: relative;
+
+  background: transparent;
+
+  border-radius: 50%;
+
+  padding: 8px;
+
+  overflow: visible;
+
+  animation:
+    floating 4s ease-in-out infinite;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.image-circle img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 7px solid #ffffff;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   PINK DECORATIVE RING
+========================================= */
+
+.image-circle::before {
+  content: "";
+
+  position: absolute;
+
+  width: 100%;
+
+  height: 100%;
+
+  top: 0;
+
+  left: 0;
+
+  border: 2px solid rgba(173, 37, 117, 0.55);
+
+  border-radius: 50%;
+
+  transform: scale(1.05);
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   DECORATIVE DOT
+========================================= */
+
+.image-circle::after {
+  content: "";
+
+  position: absolute;
+
+  width: 11px;
+
+  height: 11px;
+
+  border-radius: 50%;
+
+  background: #ad2575;
+
+  top: 30px;
+
+  right: 5px;
+
+  box-shadow:
+    0 0 0 8px rgba(173, 37, 117, 0.12);
+
+  animation:
+    pulseDot 2s ease-in-out infinite;
+}
+
+
+/* =========================================
+   DOT ANIMATION
+========================================= */
+
+@keyframes pulseDot {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+
+/* =========================================
+   TEXT REVEAL
+========================================= */
+
+@keyframes textReveal {
+
+  0% {
+    opacity: 0;
+
+    transform: translateY(35px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   IMAGE ENTER
+========================================= */
+
+@keyframes imageAnimation {
+
+  0% {
+    opacity: 0;
+
+    transform: translateX(80px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================
+   FLOATING IMAGE
+========================================= */
+
+@keyframes floating {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1200px) {
+
+  .home-container {
+    max-width: 1250px;
+
+    gap: 50px;
+  }
+
+
+  .home-content {
+    width: 52%;
+  }
+
+
+  .home-image {
+    width: 48%;
+  }
+
+
+  .image-circle {
+    width: 450px;
+
+    height: 450px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+  .home {
+
+    margin-left: 0;
+
+    padding-top: 120px;
+
+    padding-bottom: 80px;
+  }
+
+
+  .home-container {
+
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 60px;
+  }
+
+
+  .home-content {
+
+    width: 100%;
+  }
+
+
+  .home-content h1 {
+
+    font-size: 56px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .developer-title {
+
+    font-size: 25px;
+  }
+
+
+  .description {
+
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+
+  .home-buttons {
+
+    justify-content: center;
+  }
+
+
+  .social-links {
+
+    justify-content: center;
+  }
+
+
+  .home-image {
+
+    width: 100%;
+  }
+
+
+  .image-circle {
+
+    width: 350px;
+
+    height: 350px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+
+
+@media (max-width: 576px) {
+
+  .home {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+
+  .home-container {
+
+    width: 88%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    text-align: center;
+  }
+
+
+  /* =========================================
+     CONTENT
+  ========================================= */
+
+  .home-content {
+
+    width: 100%;
+
+    display: contents;
+  }
+
+
+  /* =========================================
+     TITLE
+  ========================================= */
+
+  .home-content h1 {
+
+    order: 1;
+
+    width: 100%;
+
+    font-size: 40px;
+
+    letter-spacing: -1px;
+
+    line-height: 1;
+
+    margin-bottom: 18px;
+  }
+
+
+  /* =========================================
+     DEVELOPER TITLE
+  ========================================= */
+
+  .developer-title {
+
+    order: 2;
+
+    width: 100%;
+
+    font-size: 20px;
+
+    min-height: 30px;
+
+    margin-bottom: 18px;
+  }
+
+
+  /* =========================================
+     DESCRIPTION
+  ========================================= */
+
+  .description {
+
+    order: 3;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin: 0 auto 35px;
+  }
+
+
+  /* =========================================
+     IMAGE
+  ========================================= */
+
+  .home-image {
+
+    order: 4;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+  }
+
+
+  .image-circle {
+
+    width: 280px;
+
+    height: 280px;
+  }
+
+
+  .image-circle::after {
+
+    width: 9px;
+
+    height: 9px;
+
+    top: 25px;
+
+    right: 0;
+  }
+
+
+  /* =========================================
+     BUTTON
+  ========================================= */
+
+  .home-buttons {
+
+    order: 5;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 0;
+
+    margin-bottom: 0;
+  }
+
+
+  .home-buttons a,
+  .home-buttons button {
+
+    width: 200px;
+  }
+
+
+  /* =========================================
+     SOCIAL
+  ========================================= */
+
+  .social-links {
+
+    order: 6;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 27px;
+
+    gap: 12px;
+  }
+
+
+  .social-links a {
+
+    width: 42px;
+
+    height: 42px;
+  }
+
+
+  .social-links a i {
+
+    font-size: 18px;
+  }
+
+}
+

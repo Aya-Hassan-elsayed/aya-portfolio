@@ -1,1 +1,298 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* =========================================================
+   GLOBAL STYLES
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   TOASTR - PORTFOLIO THEME
+========================================================= */
+
+.toast-container {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast-container .ngx-toastr {
+
+  /* Dynamic width */
+  width: max-content !important;
+  min-width: 280px !important;
+  max-width: 520px !important;
+
+  min-height: auto !important;
+
+  padding: 16px 48px 16px 20px !important;
+
+  margin-bottom: 12px !important;
+
+  border-radius: 12px !important;
+
+  /* Portfolio background */
+  background: #17152a !important;
+
+  background-image: none !important;
+
+  /* Portfolio accent */
+  border: 1px solid rgba(211, 54, 130, 0.30) !important;
+
+  border-left: 4px solid #d33682 !important;
+
+  color: #ffffff !important;
+
+  opacity: 1 !important;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.40),
+    0 0 25px rgba(211, 54, 130, 0.10) !important;
+
+  white-space: normal !important;
+
+  overflow: hidden !important;
+
+  line-height: 1.5 !important;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease !important;
+}
+
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.toast-container .ngx-toastr.toast-success {
+
+  background: #17152a !important;
+
+  background-image: none !important;
+
+  border-left: 4px solid #d33682 !important;
+}
+
+
+/* =========================================================
+   WARNING
+========================================================= */
+
+.toast-container .ngx-toastr.toast-warning {
+
+  background: #17152a !important;
+
+  background-image: none !important;
+
+  border-left: 4px solid #d33682 !important;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.toast-container .ngx-toastr.toast-error {
+
+  background: #17152a !important;
+
+  background-image: none !important;
+
+  border-left: 4px solid #d33682 !important;
+}
+
+
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.toast-container .ngx-toastr .toast-title {
+
+  display: block !important;
+
+  margin: 0 0 6px 0 !important;
+
+  color: #ffffff !important;
+
+  font-size: 15px !important;
+
+  font-weight: 600 !important;
+
+  line-height: 1.4 !important;
+
+  letter-spacing: 0.2px !important;
+
+  white-space: nowrap !important;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.toast-container .ngx-toastr .toast-message {
+
+  display: block !important;
+
+  margin: 0 !important;
+
+  color: #e5e2ea !important;
+
+  font-size: 13px !important;
+
+  font-weight: 400 !important;
+
+  line-height: 1.65 !important;
+
+  white-space: nowrap !important;
+
+  word-break: normal !important;
+
+  overflow-wrap: normal !important;
+}
+
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.toast-container .ngx-toastr .toast-close-button {
+
+  position: absolute !important;
+
+  top: 7px !important;
+
+  right: 9px !important;
+
+  width: 24px !important;
+
+  height: 24px !important;
+
+  padding: 0 !important;
+
+  border: none !important;
+
+  background: transparent !important;
+
+  color: #aaa6b5 !important;
+
+  font-size: 19px !important;
+
+  font-weight: 300 !important;
+
+  line-height: 20px !important;
+
+  opacity: 0.75 !important;
+
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease !important;
+}
+
+
+.toast-container .ngx-toastr .toast-close-button:hover {
+
+  color: #d33682 !important;
+
+  opacity: 1 !important;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.toast-container .ngx-toastr .toast-progress {
+
+  position: absolute !important;
+
+  bottom: 0 !important;
+
+  left: 0 !important;
+
+  width: 100% !important;
+
+  height: 2px !important;
+
+  background: #d33682 !important;
+
+  opacity: 1 !important;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.toast-container .ngx-toastr:hover {
+
+  transform: translateY(-2px);
+
+  border-color: rgba(211, 54, 130, 0.60) !important;
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.45),
+    0 0 30px rgba(211, 54, 130, 0.14) !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+  .toast-container {
+
+    width: auto !important;
+
+    left: 12px !important;
+
+    right: 12px !important;
+  }
+
+
+  .toast-container .ngx-toastr {
+
+    width: max-content !important;
+
+    min-width: 0 !important;
+
+    max-width: calc(100vw - 24px) !important;
+
+    margin-left: auto !important;
+
+    margin-right: auto !important;
+
+    padding: 14px 42px 14px 17px !important;
+  }
+
+
+  .toast-container .ngx-toastr .toast-title {
+
+    font-size: 12px !important;
+  }
+
+
+  .toast-container .ngx-toastr .toast-message {
+
+    font-size: 10px !important;
+
+    white-space: normal !important;
+  }
+
+}
+

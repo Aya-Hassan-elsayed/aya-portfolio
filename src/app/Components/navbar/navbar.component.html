@@ -1,0 +1,102 @@
+<nav class="navbar">
+
+  <div class="navbar-container">
+
+    <!-- Logo -->
+    <a
+      class="logo"
+      href="#home"
+      (click)="closeMenu()"
+    >
+      Aya<span>.</span>
+    </a>
+
+
+    <!-- Menu -->
+    <ul class="nav-menu" [class.open]="isMenuOpen">
+
+      <!-- Home -->
+      <li class="nav-item">
+        <a
+          href="#home"
+          class="nav-link"
+          [class.active]="activeSection === 'home'"
+          (click)="closeMenu()"
+        >
+          Home
+        </a>
+      </li>
+
+
+      <!-- About -->
+      <li class="nav-item" [class.open]="isMenuOpen">
+        <a
+          href="#about"
+          class="nav-link"
+          [class.active]="activeSection === 'about'"
+          (click)="closeMenu()"
+        >
+          About
+        </a>
+      </li>
+
+
+      <!-- Portfolio -->
+      <li class="nav-item" [class.open]="isMenuOpen">
+        <a
+          href="#projects"
+          class="nav-link"
+          [class.active]="activeSection === 'projects'"
+          (click)="closeMenu()"
+        >
+          Portfolio
+        </a>
+      </li>
+
+
+      <!-- Services -->
+      <li class="nav-item" [class.open]="isMenuOpen">
+        <a
+          href="#skills"
+          class="nav-link"
+         [class.active]="activeSection === 'skills'"
+
+          (click)="closeMenu()"
+        >
+          Skills
+        </a>
+      </li>
+
+
+      <!-- Contact -->
+      <li class="nav-item" [class.open]="isMenuOpen">
+        <a
+          href="#contact"
+          class="nav-link"
+          [class.active]="activeSection === 'contact'"
+
+          (click)="closeMenu()"
+        >
+          Contact
+        </a>
+      </li>
+
+    </ul>
+
+
+    <!-- Mobile Menu Button -->
+    <button
+      class="menu-toggle"
+      [class.open]="isMenuOpen"
+      (click)="toggleMenu()"
+      aria-label="Toggle navigation menu"
+      type="button"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+</nav>
